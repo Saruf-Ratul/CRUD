@@ -1,0 +1,143 @@
+<form   class="normal-form">
+
+    <!-- [formGroup]="service.form" -->
+
+    <!-- <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden" formControlName="$key">
+                <mat-from-field>
+                    <input formControlName="fullName" matInput placeholder="Full Name*"> 
+                </mat-from-field>
+                <mat-from-field>
+                    <input formControlName="email" matInput placeholder="Email"> 
+                </mat-from-field>
+                <mat-from-field>
+                    <input formControlName="mobile" matInput placeholder="Mobile*"> 
+                </mat-from-field>
+                <mat-form-field>
+                    <input formControlName="city" matInput placeholder="City">
+                  </mat-form-field>
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list> -->
+</form>
+
+<!-- <html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="hidden" id="hfRowIndex" value="" />
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" name="Id" id="txtId" value="1" />
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" name="Name" id="txtName" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>
+                <input type="text" name="Country" id="txtCountry" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type='button' id='btnAdd'>Add</button>
+                <button type='button' id='btnUpdate' style="display: none;">Update</button>
+            </td>
+            <td>
+                <button type='button' id='btnClear'>Clear</button>
+            </td>
+        </tr>
+    </table>
+    <table id="tblCustomers" class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btnAdd').on('click', function () {
+                var name, country, id;
+                id = $("#txtId").val();
+                name = $("#txtName").val();
+                country = $("#txtCountry").val();
+ 
+                var edit = "<a class='edit' href='JavaScript:void(0);' >Edit</a>";
+                var del = "<a class='delete' href='JavaScript:void(0);'>Delete</a>";
+ 
+                if (name == "" || country == "") {
+                    alert("Name and Country fields required!");
+                } else {
+                    var table = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + country + "</td><td>" + edit + "</td><td>" + del + "</td></tr>";
+                    $("#tblCustomers").append(table);
+                }
+                id = $("#txtId").val("");
+                name = $("#txtName").val("");
+                country = $("#txtCountry").val("");
+                Clear();
+            });
+ 
+            $('#btnUpdate').on('click', function () {
+                var name, country, id;
+                id = $("#txtId").val();
+                name = $("#txtName").val();
+                country = $("#txtCountry").val();
+ 
+                $('#tblCustomers tbody tr').eq($('#hfRowIndex').val()).find('td').eq(1).html(name);
+                $('#tblCustomers tbody tr').eq($('#hfRowIndex').val()).find('td').eq(2).html(country)
+ 
+                $('#btnAdd').show();
+                $('#btnUpdate').hide();
+                Clear();
+            });
+ 
+            $("#tblCustomers").on("click", ".delete", function (e) {
+                if (confirm("Are you sure want to delete this record!")) {
+                    $(this).closest('tr').remove();
+                } else {
+                    e.preventDefault();
+                }
+            });
+ 
+            $('#btnClear').on('click', function () {
+                Clear();
+            });
+ 
+            $("#tblCustomers").on("click", ".edit", function (e) {
+                var row = $(this).closest('tr');
+                $('#hfRowIndex').val($(row).index());
+                var td = $(row).find("td");
+                $('#txtId').val($(td).eq(0).html());
+                $('#txtName').val($(td).eq(1).html());
+                $('#txtCountry').val($(td).eq(2).html());
+                $('#btnAdd').hide();
+                $('#btnUpdate').show();
+            });
+        });
+        function Clear() {
+            $("#txtId").val("");
+            $("#txtName").val("");
+            $("#txtCountry").val("");
+            $("#hfRowIndex").val("");
+        }
+    </script>
+</body>
+</html> -->
